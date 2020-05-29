@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vincent Br.</title>
+    <link rel="icon" href="pictures/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <style>
+    body {
+        background-image: url("pictures/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Arimo';font-size: 22px;
+        color: white;
+    }
+    .center{
+        text-align: center;
+        padding-top: 15%;
+        font-size: 40px;
+    }
+    .content{
+        width: 80%;
+        height: 2000px;
+        color: black;
+        background-color: white;
+        margin: 10%;
+        margin-top: 25%;
+    }
+    .column {
+      float: left;
+      width: 28%;
+      padding: 30px;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    @media screen and (max-width:600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    /* Style The Dropdown Button */
+.dropbtn {
+  background-color: rgb(1, 169, 199);
+  color: white;
+  padding: 16px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0064c2;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(1, 169, 199)}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #0064c2;
+}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+    <div class="center">
+        <h1 style="margin-bottom: 0px;">Vincent Br.</h1>
+        <p style="font-size:20px;">Photography - Videography - Programming</p>
+        <div class="dropdown">
+            <button class="dropbtn">Socials</button>
+            <div class="dropdown-content">
+              <a href="#">Youtube</a>
+              <a href="#">Main Instagram</a>
+              <a href="#">Extra Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="column">
+                <h2>Photography</h2>
+                <p>dasf</p>
+            </div>
+            <div class="column">
+                <h2>Videography</h2>
+                <p> bdfs sadf</p>
+            </div>
+            <div class="column">
+                <h2>Programming</h2>
+                <p>BLa Bla</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
