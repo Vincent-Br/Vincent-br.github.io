@@ -21,11 +21,11 @@
     }
     .content{
         width: 80%;
-        height: 2000px;
+        height: 1500px;
         color: black;
         background-color: white;
         margin: 10%;
-        margin-top: 25%;
+        margin-top: 30%;
     }
     .column {
       float: left;
@@ -37,57 +37,26 @@
       display: table;
       clear: both;
     }
+    .contact{
+      padding: 30px;
+    }
+    .button {
+        background-color: rgb(0, 195, 255);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
     @media screen and (max-width:600px) {
       .column {
         width: 100%;
       }
     }
-    /* Style The Dropdown Button */
-.dropbtn {
-  background-color: rgb(1, 169, 199);
-  color: white;
-  padding: 16px;
-  font-size: 15px;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #0064c2;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: rgb(1, 169, 199)}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #0064c2;
-}
 </style>
 <script>
 
@@ -97,14 +66,6 @@
     <div class="center">
         <h1 style="margin-bottom: 0px;">Vincent Br.</h1>
         <p style="font-size:20px;">Photography - Videography - Programming</p>
-        <div class="dropdown">
-            <button class="dropbtn">Socials</button>
-            <div class="dropdown-content">
-              <a href="#">Youtube</a>
-              <a href="#">Main Instagram</a>
-              <a href="#">Extra Instagram</a>
-            </div>
-        </div>
     </div>
     <div class="content">
         <div class="row">
@@ -118,9 +79,20 @@
             </div>
             <div class="column">
                 <h2>Programming</h2>
-                <p>Coming Soon!</p>
+                <p>Deze site heb ik zelf ontworpen en geprogrameerd door middel van HTML en CSS.
+                Door het programmeren in Visual Studio Code kon ik makkelijk fouten opsporen en automatisch mijn script laten aanvullen,
+                Ik heb voor het hosten van deze site gekozen voor GitHub Pages. GitHub Pages is een gratis service van GitHub waarmee je
+                HTML files upload naar GitHub. Het fijne hiervan is dat je geen reclame van de host hebt en dat je eigenlijk geen grens hebt.
+                Ik kan mijn eigen cookies schrijven en zelfs een eigen error page maken. Wil je weten hoe ik dit allemaal gedaan heb?<br>
+                Klik op de knop voor het Script!</p>
+                <a href="https://github.com/Vincent-Br/Vincent-br.github.io" class="button" target="_blank">Script op GitHub</a>
             </div>
+        <div class="contact">
+          <h2>Contact</h2>
+          <a href="https://www.youtube.com/channel/UCyk8DT7BO1hxCXq2xaVPafw" class="button" target="_blank" style="background-color:red;">Youtube</a>
+          <a href="https://www.instagram.com/vincent.br_/" class="button" target="_blank" style="background-color:purple;">Main Instagram</a>
+          <a href="https://www.instagram.com/_vincent.br_/" class="button" target="_blank" style="background-color:purple;">Extra Instagram</a>
         </div>
-    </div>
+      </div>
 </body>
 </html>
