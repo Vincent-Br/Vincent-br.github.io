@@ -1,0 +1,35 @@
+{
+    "name": "vincent-br.github.io",
+    "version": "2.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "concurrently --kill-others 'npm:watch-*'",
+        "watch-ts": "npx tsc --watch",
+        "watch-scss": "sass --watch src:dist/static/css",
+        "lint": "eslint --ext .ts --fix src/**"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Vincent-Br/Vincent-br.github.io.git"
+    },
+    "keywords": [],
+    "author": "Vincent Brokx",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Vincent-Br/Vincent-br.github.io/issues"
+    },
+    "homepage": "https://github.com/Vincent-Br/Vincent-br.github.io#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.36.2",
+        "@typescript-eslint/parser": "^5.36.2",
+        "concurrently": "^7.4.0",
+        "eslint": "^8.23.0",
+        "eslint-config-standard-with-typescript": "^22.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.2.5",
+        "eslint-plugin-promise": "^6.0.1",
+        "sass": "^1.54.9",
+        "typescript": "^4.8.2"
+    }
+}
