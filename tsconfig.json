@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "strict": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist/static/js",
+      "rootDir": "src",
+      "baseUrl": "./src"
+    },
+    "lib": ["es2015"],
+    "watchOptions": {
+      "fallbackPolling": "dynamicPriority",
+      "synchronousWatchDirectory": true,
+      "excludeDirectories": ["**/node_modules", "dist"]
+    }
+  }
