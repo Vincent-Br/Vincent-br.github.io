@@ -1,26 +1,41 @@
+.material-symbols-rounded {
+  color: #000000;
+  user-select: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
   background-color: #eeeeee;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
 }
-
-.material-symbols-rounded {
-  color: white;
-  user-select: none;
+body button {
+  color: #ffffff;
+  font-family: "Bowlby One SC", cursive;
+  background-color: #4361ee;
+  border: 3px solid #4361ee;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: all 0.2s;
+}
+body button:hover {
+  color: #4361ee;
+  background-color: #ffffff;
+  transition: all 0.2s;
 }
 
 header {
-  top: 0;
   background-color: #ffffff;
-  position: fixed;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.062745098);
-  visibility: hidden;
+  position: fixed;
   width: 100vw;
   height: 80px;
+  top: 0;
   z-index: 1;
 }
 @media only screen and (min-width: 600px) {
@@ -28,22 +43,39 @@ header {
     height: 50px;
   }
 }
+header .navbar, header .header-wordmark {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .header-wordmark {
+  color: #4361ee;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 30px;
+  left: 20%;
+}
+header .navbar {
+  right: 20%;
+}
+@media only screen and (max-width: 600px) {
+  header .navbar {
+    visibility: hidden;
+  }
+}
 
 .banner {
-  background-color: #292929;
-  background: linear-gradient(45deg, #000000 0%, #292929 100%);
-  box-shadow: inset 0 0 1000px #000;
+  background-color: #ffffff;
+  background: linear-gradient(45deg, #eeeeee 0%, #ffffff 100%);
+  box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.3137254902);
+  border-bottom: 5px solid #4361ee;
   width: 100vw;
   height: 100vh;
 }
 .banner .banner-text {
+  color: #4361ee;
   font-family: "Bowlby One SC", cursive;
   font-size: 30px;
-  text-align: right;
-  line-height: 1em;
-  background: linear-gradient(45deg, #4361ee 0%, #ff1053 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -54,10 +86,27 @@ header {
 @media only screen and (min-width: 800px) {
   .banner .banner-text {
     font-size: 70px;
-    left: 0;
-    right: 200px;
-    transform: translate(0, -50%);
   }
+}
+.banner .banner-text h1 {
+  margin: 0;
+}
+.banner .banner-text button {
+  color: #ffffff;
+  font-family: "Bowlby One SC", cursive;
+  background-color: #ff1053;
+  border: 3px solid #ff1053;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: all 0.2s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner .banner-text button:hover {
+  color: #ff1053;
+  background-color: #ffffff;
+  transition: all 0.2s;
 }
 .banner img {
   position: absolute;
@@ -67,14 +116,14 @@ header {
   max-width: 50%;
   transform: translateY(-50%);
 }
-.banner a {
+.banner #scroll-arrow {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 600px) {
-  .banner a {
+  .banner #scroll-arrow {
     visibility: hidden;
   }
 }
@@ -99,18 +148,54 @@ main p {
 
 footer {
   color: #ffffff;
-  background-color: #292929;
+  background-color: #4361ee;
   position: relative;
   width: 100vw;
-  height: 100px;
-  visibility: hidden;
+  height: 100%;
+  padding: 40px 0;
 }
-footer p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 25%));
+  gap: 20px;
+  justify-content: space-between;
+  align-content: center;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+footer .footer-item {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+footer .footer-item p {
+  margin: 10px 0;
+}
+footer .footer-item p a {
+  color: #ffffff;
+}
+footer .footer-item h2 {
+  margin: 0 0 10px 0;
+}
+footer .footer-item .footer-wordmark {
+  color: #ffffff;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 30px;
+  text-decoration: none;
+}
+footer .footer-item .footer-socials a {
+  margin-right: 5px;
+  -webkit-text-fill-color: transparent;
+}
+footer .footer-item .footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+footer .footer-item .footer-links a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

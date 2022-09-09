@@ -10,3 +10,24 @@ $white: #ffffff
 // Fonts
 $bowlby: 'Bowlby One SC', cursive
 $roboto: 'Roboto', sans-serif
+
+@mixin button($color: $white, $background-color: $blue)
+    color: $color
+    font-family: $bowlby
+
+    background-color: $background-color
+    border: 3px solid $background-color
+    border-radius: 10px
+
+    padding: 5px 10px
+    transition: all 0.2s
+
+    &:hover
+        color: $background-color
+        background-color: $color
+        transition: all 0.2s
+
+    
+.material-symbols-rounded
+    color: $black
+    user-select: none
