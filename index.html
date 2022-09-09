@@ -9,6 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Keywords" content="">
     <meta name="Description" content="Hey! Welkom op mijn website.">
+    <meta name="robots" content="index, follow">
+
+    <meta content="Vincent" property="og:title" />
+    <meta content="Hey! Welkom op mijn website." property="og:description" />
+    <meta content="https://vincent-br.github.io/" property="og:url" />
+    <meta content="" property="og:image" />
+    <meta content="#4361ee" data-react-helmet="true" name="theme-color" />
 
     <link rel="stylesheet" href="dist/static/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +25,21 @@
 </head>
 <body>
     <header>
-
+        <a href=".">
+            <h2 class="header-wordmark">Vincent</h2>
+        </a>
+        <nav class="navbar">
+            <button>Bekijk Fotogallerij</button>
+        </nav>
     </header>
     <div class="banner">
         <!-- <img src="static/img/banner_1.webp"> -->
+        <div class="banner-triangle"></div>
         <div class="banner-text">
             <h1>Vincent</h1>
+            <button>Bekijk Fotogallerij</button>
         </div>
-        <a href="#main">
+        <a id="scroll-arrow" href="#main">
             <span class="material-symbols-rounded">
                 expand_more
             </span>
@@ -34,10 +48,46 @@
     <main id="main">
         <div class="container">
             <p style="font-weight: 900;">Hmmm, we missen iets...</p>
-            <p style="font-weight: 100;">Binnenkort hier meer!</p>
+            <p style="font-weight: 100;">Niet getreurd, het is onderweg!</p>
         </div>
     </main>
     <footer>
-        <p>© Copyright 2022 Vincent Brokx</p>
+        <div class="footer-grid">
+            <div class="footer-item">
+                <a href="." class="footer-wordmark">
+                    <h2>Vincent</h2>
+                </a>
+                <div class="footer-socials">
+                    <a rel="external" href="https://www.instagram.com/vincent.br_/" target="_blank">
+                        <img alt="instagram" src="dist/static/img/instagram.svg" height="30px" style="border-width:0" />
+                    </a>
+                    <a rel="external" href="https://www.youtube.com/channel/UCyk8DT7BO1hxCXq2xaVPafw" target="_blank">
+                        <img alt="youtube" src="dist/static/img/youtube.svg" height="30px" style="border-width:0" />
+                    </a>
+                    <a rel="external" href="https://discord.com/users/690954993716559897" target="_blank">
+                        <img alt="discord" src="dist/static/img/discord.svg" height="30px" style="border-width:0" />
+                    </a>
+                    <a rel="external" href="https://github.com/Vincent-Br/" target="_blank">
+                        <img alt="github" src="dist/static/img/github.svg" height="30px" style="border-width:0" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h3>Links</h3>
+                <div class="footer-links">
+                    <a href="/gallery">Gallerij</a>
+                    <a href="/license">Licenties en Copyright</a>
+                    <a href="https://github.com/Vincent-Br/Vincent-br.github.io/issues">Rapporteer een bug</a>
+                </div>
+            </div>
+            <div class="footer-item">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                    <img alt="Creative Commons-Licentie" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+                </a>
+                <p>© 2022 Vincent Brokx. Sommige Rechten Voorbehouden.</p>
+                <p>Tenzij anders vermeld is alles in dit werk gelicenceerd onder een <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 4.0 Internationaal-licentie</a>.</p>
+            </div>
+        </div>
+
     </footer>
 </body>
