@@ -1,0 +1,61 @@
+@use 'style'
+    
+@mixin footer($dark-theme: false)
+
+    @if $dark-theme
+        style.$white: style.$blue
+        style.$blue: style.$dark-gray
+
+    color: style.$white
+
+    background-color: style.$blue
+
+    position: relative
+    width: 100vw
+    height: 100%
+    padding: 40px 0
+
+    .footer-grid
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(250px, 25%))
+        gap: 20px
+        justify-content: space-between
+        align-content: center
+        align-items: baseline
+
+        width: 60%
+        height: 100%
+        margin: auto
+
+    .footer-item
+        width: 100%
+        height: 100%
+        margin-bottom: 50px
+
+        p
+            margin: 10px 0
+
+            a
+                color: style.$white
+
+        h2
+            margin: 0 0 10px 0
+
+        .footer-wordmark
+            color: style.$white
+            font-family: style.$bowlby
+            font-size: 30px
+            text-decoration: none
+
+        .footer-socials a
+            margin-right: 5px
+            -webkit-text-fill-color: transparent
+
+        .footer-links
+            a
+                color: style.$white
+                text-decoration: none
+                display: block
+                margin: 5px 0
+                &:hover
+                    text-decoration: underline

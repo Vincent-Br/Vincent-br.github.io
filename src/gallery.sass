@@ -1,0 +1,56 @@
+@use 'components/style'
+@use 'components/header'
+@use 'components/footer'
+
+.banner
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/dist/static/img/gallery/IMG_0141.jpg')
+    background-position: center
+    background-size: cover
+
+    position: relative
+    width: 100vw
+    height: 300px
+    margin-top: 50px
+
+    .data-container
+        position: absolute
+        top: 50%
+        left: 20%
+        transform: translateY(-50%)
+
+        p, h1
+            color: style.$white
+            margin: 0
+
+.image-nav
+    background-color: style.$white
+
+    width: 100vw
+    height: 50px
+
+#image-container
+    display: grid
+    grid-template-columns: repeat(auto-fill, 350px)
+    grid-auto-flow: row dense
+    gap: 20px
+    justify-content: center
+    align-content: center
+
+    width: 60%
+    height: 100%
+    min-height: 40vh
+    margin: 20px auto
+
+    div
+        // overflow: hidden
+
+        img
+            max-width: 100%
+            transition: all 0.2s
+            cursor: pointer
+
+            &:hover
+                transform: scale(102%)
+
+footer
+    @include footer.footer($dark-theme: true)

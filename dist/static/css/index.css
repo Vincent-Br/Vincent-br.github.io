@@ -1,8 +1,3 @@
-.material-symbols-rounded {
-  color: #000000;
-  user-select: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -22,11 +17,17 @@ body button {
   border-radius: 10px;
   padding: 5px 10px;
   transition: all 0.2s;
+  cursor: pointer;
 }
 body button:hover {
   color: #4361ee;
   background-color: #ffffff;
   transition: all 0.2s;
+}
+
+.material-symbols-rounded {
+  color: #000000;
+  user-select: none;
 }
 
 header {
@@ -57,10 +58,11 @@ header .header-wordmark {
 }
 header .navbar {
   right: 20%;
+  visibility: hidden;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   header .navbar {
-    visibility: hidden;
+    visibility: visible;
   }
 }
 
@@ -71,7 +73,6 @@ header .navbar {
   border-bottom: 5px solid #4361ee;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 .banner .banner-text {
   color: #4361ee;
@@ -100,6 +101,7 @@ header .navbar {
   border-radius: 10px;
   padding: 5px 10px;
   transition: all 0.2s;
+  cursor: pointer;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -129,18 +131,62 @@ header .navbar {
   }
 }
 
-main {
+#main {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  padding: 50px 0;
 }
-main .container {
+#main .gallery-collections {
+  width: 60vw;
+  margin: 20px auto;
+  padding: 20px 50px;
+}
+#main .gallery-collections #collections-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+#main .gallery-collections #collections-grid div {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3137254902);
+  border-radius: 5px;
+  position: relative;
+  width: 350px;
+  height: 500px;
+  margin: 10px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+#main .gallery-collections #collections-grid div:hover {
+  transform: scale(102%);
+}
+#main .gallery-collections #collections-grid div img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  top: -75px;
 }
-main p {
+#main .gallery-collections #collections-grid div div {
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  margin: 0;
+}
+#main .gallery-collections #collections-grid div div h3 {
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+#main p {
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 30px;
@@ -161,6 +207,7 @@ footer .footer-grid {
   gap: 20px;
   justify-content: space-between;
   align-content: center;
+  align-items: baseline;
   width: 60%;
   height: 100%;
   margin: auto;

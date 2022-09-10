@@ -22,6 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="text/javascript" src="dist/static/js/galleryData.js" charset="utf-8" defer></script>
+    <script type="text/javascript" src="dist/static/js/index.js" charset="utf-8" defer></script>
 </head>
 <body>
     <header>
@@ -29,26 +31,28 @@
             <h2 class="header-wordmark">Vincent</h2>
         </a>
         <nav class="navbar">
-            <button>Bekijk Fotogallerij</button>
+            <button onclick="location.href='/gallery'">Bekijk Fotogallerij</button>
         </nav>
     </header>
-    <div class="banner">
-        <!-- <img src="static/img/banner_1.webp"> -->
-        <div class="banner-triangle"></div>
-        <div class="banner-text">
-            <h1>Vincent</h1>
-            <button>Bekijk Fotogallerij</button>
+    <main>
+        <div class="banner">
+            <!-- <img src="static/img/banner_1.webp"> -->
+            <div class="banner-triangle"></div>
+            <div class="banner-text">
+                <h1>Vincent</h1>
+                <button onclick="location.href='/gallery'">Bekijk Fotogallerij</button>
+            </div>
+            <a id="scroll-arrow" href="#main">
+                <span class="material-symbols-rounded">
+                    expand_more
+                </span>
+            </a>
         </div>
-        <a id="scroll-arrow" href="#main">
-            <span class="material-symbols-rounded">
-                expand_more
-            </span>
-        </a>
-    </div>
-    <main id="main">
-        <div class="container">
-            <p style="font-weight: 900;">Hmmm, we missen iets...</p>
-            <p style="font-weight: 100;">Niet getreurd, het is onderweg!</p>
+        <div id="main">
+            <div class="gallery-collections">
+                <div id="collections-grid">
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -76,7 +80,7 @@
                 <h3>Links</h3>
                 <div class="footer-links">
                     <a href="/gallery">Gallerij</a>
-                    <a href="/license">Licenties en Copyright</a>
+                    <a href="/copyright">Licenties en Copyright</a>
                     <a href="https://github.com/Vincent-Br/Vincent-br.github.io/issues">Rapporteer een bug</a>
                 </div>
             </div>
@@ -88,6 +92,5 @@
                 <p>Tenzij anders vermeld is alles in dit werk gelicenceerd onder een <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 4.0 Internationaal-licentie</a>.</p>
             </div>
         </div>
-
     </footer>
 </body>

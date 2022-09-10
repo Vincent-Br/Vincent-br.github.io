@@ -1,0 +1,47 @@
+// Colors
+$black: #000000
+$dark-gray: #292929
+$light-blue: #4895ef
+$blue: #4361ee
+$pink: #ff1053
+$dark-white: #eeeeee
+$white: #ffffff
+
+// Fonts
+$bowlby: 'Bowlby One SC', cursive
+$roboto: 'Roboto', sans-serif
+
+@mixin button($color: $white, $background-color: $blue)
+    color: $color
+    font-family: $bowlby
+
+    background-color: $background-color
+    border: 3px solid $background-color
+    border-radius: 10px
+
+    padding: 5px 10px
+    transition: all 0.2s
+    cursor: pointer
+
+    &:hover
+        color: $background-color
+        background-color: $color
+        transition: all 0.2s
+    
+html
+    scroll-behavior: smooth
+    
+body
+    font-family: $roboto
+    background-color: $dark-white
+
+    width: 100vw
+    margin: 0
+    overflow-x: hidden
+
+    button
+        @include button
+    
+.material-symbols-rounded
+    color: $black
+    user-select: none
