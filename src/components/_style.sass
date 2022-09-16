@@ -27,6 +27,11 @@ $roboto: 'Roboto', sans-serif
         color: $background-color
         background-color: $color
         transition: all 0.2s
+
+@mixin container
+    width: 60vw
+    height: 100%
+    margin: auto
     
 html
     scroll-behavior: smooth
@@ -41,7 +46,3 @@ body
 
     button
         @include button
-    
-.material-symbols-rounded
-    color: $black
-    user-select: none

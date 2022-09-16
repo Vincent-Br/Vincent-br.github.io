@@ -21,7 +21,7 @@ function displayCollection(collectionIndex: number) {
             var imageName = galleryData.collections[collectionIndex].images[i];
 
             var image = document.createElement("img")
-            image.src = `/dist/static/img/gallery/${imageName}`
+            image.src = `/static/img/gallery/${imageName}`
             image.alt = imageName
 
             var imageDiv = document.createElement("div")

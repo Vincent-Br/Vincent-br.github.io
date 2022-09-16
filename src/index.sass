@@ -4,16 +4,19 @@
 
 .banner
     background-color: style.$white
-    background: linear-gradient(45deg, style.$dark-white 0%, style.$white 100%)
+    // background: linear-gradient(45deg, style.$dark-white 0%, style.$white 100%)
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/static/img/banner.jpg)
+    background-position: center
+    background-size: cover
     box-shadow: inset 0 0 1000px #00000050
 
-    border-bottom: 5px solid style.$blue
+    // border-bottom: 5px solid style.$blue
 
     width: 100vw
     height: 100vh
 
     .banner-text
-        color: style.$blue
+        color: style.$pink
         font-family: style.$bowlby
         font-size: 30px
 
@@ -31,7 +34,7 @@
             margin: 0
 
         button
-            @include style.button($background-color: style.$pink)
+            @include style.button($background-color: style.$blue)
 
             position: absolute
             left: 50%
@@ -54,12 +57,52 @@
 
         @media only screen and (max-width: 600px)
             visibility: hidden
+        
+        .material-symbols-rounded
+            color: style.$white
+            user-select: none
+            animation-name: scroll-arrow
+            animation-duration: 4s
+            animation-iteration-count: infinite
+
+        @keyframes scroll-arrow
+            0%
+                transform: translateY(0)
+
+            25%
+                transform: translateY(50%)
+
+            50%
+                transform: translateY(0)
+                
 
 #main
     position: relative
     width: 100vw
     height: 100%
     padding: 50px 0
+    overflow-y: hidden
+
+    .about-me
+        position: relative
+        height: 100vh
+
+        .bg
+            background-color: style.$blue
+
+            position: absolute
+            width: 100vw
+            height: 100vh
+            top: 0
+            transform: skew(0, 10deg)
+            z-index: -1
+        
+        .content-container
+            @include style.container
+
+            color: white
+
+
 
     .gallery-collections
         // background-color: style.$white
