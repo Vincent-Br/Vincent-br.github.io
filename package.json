@@ -8,7 +8,7 @@
         "watch-ts": "npx tsc --watch",
         "watch-scss": "sass --watch src:dist/static/css",
         "lint": "eslint --ext .ts --fix src/**",
-        "build": "npx tsc && sass src:dist/static/css"
+        "build": "npx tsc && sass src:dist/static/css --style compressed"
     },
     "repository": {
         "type": "git",
