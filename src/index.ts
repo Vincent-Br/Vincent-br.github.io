@@ -8,7 +8,7 @@ for (var i = 0; i < galleryData.collections.length; i++) {
         thumbnail.src = `/static/img/gallery/${imageName}`
         thumbnail.alt = imageName
 
-        var collectionDiv = document.createElement("div")
+        var collectionDiv = document.createElement("a")
         var titleDiv = document.createElement("div")
         var title = document.createElement("h3")
         collectionDiv.appendChild(thumbnail)
@@ -17,6 +17,6 @@ for (var i = 0; i < galleryData.collections.length; i++) {
         collectionsContainer.appendChild(collectionDiv)
 
         title.innerHTML = galleryData.collections[i].name
-        collectionDiv.addEventListener("click", function(e) {location.href=`/gallery?c=${galleryData.collections[i].shortName}`}, false)
+        collectionDiv.href = `/gallery?c=${galleryData.collections[i].shortName}`
     }
 }
